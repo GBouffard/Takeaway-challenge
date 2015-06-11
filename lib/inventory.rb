@@ -7,4 +7,8 @@ class Inventory
   def add_dish(dish, quantity)
     @list[dish] = (@list.key?(dish) ? @list[dish] + quantity : quantity)
   end
+
+  def remove_dish(dish, quantity)
+    @list[dish] -= quantity
+  end
 end

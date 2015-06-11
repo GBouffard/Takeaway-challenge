@@ -20,7 +20,10 @@ describe Inventory do
     expect(inventory.list).to eq({ burger => 40 })
   end
 
-  xit 'can remove a selected quantity to an existing dish quantity' do
+  it 'can remove a selected quantity to an existing dish quantity' do
+    inventory.add_dish(burger, 25)
+    inventory.remove_dish(burger, 10)
+    expect(inventory.list).to eq({ burger => 15 })
   end
 
   xit 'cannot remove a bigger quantity from a dish than available' do
