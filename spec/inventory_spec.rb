@@ -14,7 +14,10 @@ describe Inventory do
     expect(inventory.list).to eq({ burger => 25, chips => 100 })
   end
 
-  xit 'can add a new quantity to an existing quantity of a same dish' do
+  it 'can add a new quantity to an existing quantity of a same dish' do
+    inventory.add_dish(burger, 25)
+    inventory.add_dish(burger, 15)
+    expect(inventory.list).to eq({ burger => 40 })
   end
 
   xit 'can remove a selected quantity to an existing dish quantity' do
