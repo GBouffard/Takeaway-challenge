@@ -26,6 +26,10 @@ describe Inventory do
     expect(inventory.list).to eq({ burger => 15 })
   end
 
+  it 'cannot remove a selected quantity from a dish that is not in the list' do   
+    expect { inventory.remove_dish('unicorn_steak', 10) }.to raise_error 'unicorn_steak is not in the list'
+  end
+
   xit 'cannot remove a bigger quantity from a dish than available' do
   end
 
