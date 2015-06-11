@@ -1,7 +1,9 @@
 require 'inventory'
 
 describe Inventory do
-  xit 'is empty when created' do
+  inventory = Inventory.new
+  it 'is empty when created' do
+    expect(inventory.list).to eq({})
   end
 
   xit 'can register a new added dish and its quantity' do

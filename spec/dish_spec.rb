@@ -1,7 +1,7 @@
 require 'dish'
 
 describe Dish do
-  pizza = Dish.new('pizza', 6)
+  let(:pizza) { Dish.new('pizza', 6) }
   it 'has a name when created' do
     expect(pizza.name).to eq 'pizza'
   end
