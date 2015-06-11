@@ -7,6 +7,9 @@ describe Checkout do
   xit 'can be paid' do
   end
 
+  xit 'removes the order dishes and quantities from the inventory when paid' do
+  end
+
   xit 'sends a confirmation sms when paid' do
   end
 end

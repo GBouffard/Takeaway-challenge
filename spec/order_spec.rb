@@ -24,7 +24,9 @@ describe Order do
     expect(order.basket).to eq({ burger => 1 })
   end
 
-  xit 'for a dish in the basket, cannot remove a bigger quantity than previously selected' do
+  it 'for a dish in the basket, cannot remove a bigger quantity than previously selected' do
+    order.add_dish(burger, 3, inventory)
+    expect { order.remove_dish(burger, 4) }.to raise_error 'Error. There are only 3 burgers in your basket'
   end
 
   xit 'can be confirmed' do
