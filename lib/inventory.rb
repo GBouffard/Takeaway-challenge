@@ -9,6 +9,10 @@ class Inventory
   end
 
   def remove_dish(dish, quantity)
-    @list[dish] = (@list.key?(dish) ? @list[dish] - quantity : (fail "#{dish.to_s} is not in the list"))
+    if @list.key?(dish)
+      @list[dish] > quantity ? (@list[dish] = @list[dish] - quantity) : (fail "There are only #{@list[dish]} #{dish.name}s in the list")
+    else
+      fail "#{dish} is not in the list"
+    end
   end
 end
