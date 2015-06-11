@@ -35,6 +35,9 @@ describe Inventory do
     expect { inventory.remove_dish(burger, 10) }.to raise_error 'There are only 5 burgers in the list'
   end
 
-  xit 'can display a menu of all the available dishes and their prices' do
+  it 'can display a menu of all the available dishes and their prices' do
+    inventory.add_dish(burger, 25)
+    inventory.add_dish(chips, 100)
+    expect(inventory.menu).to eq({ 'burger' => 3, 'chips' => 1 })
   end
 end
