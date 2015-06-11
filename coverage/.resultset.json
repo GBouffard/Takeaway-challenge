@@ -24,14 +24,22 @@
         null,
         1,
         1,
+        1,
+        1,
         null,
         null,
+        1,
         1,
         null,
         null
       ],
       "/Users/guillaumebouffard/Projects/Takeaway-challenge/lib/dish.rb": [
         1,
+        1,
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/guillaumebouffard/Projects/Takeaway-challenge/spec/inventory_spec.rb": [
@@ -92,6 +100,6 @@
         null
       ]
     },
-    "timestamp": 1434040367
+    "timestamp": 1434047708
   }
 }

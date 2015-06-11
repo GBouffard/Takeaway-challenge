@@ -1,9 +1,12 @@
 require 'dish'
 
 describe Dish do
-  xit 'has a name' do
+  pizza = Dish.new('pizza', 6)
+  it 'has a name when created' do
+    expect(pizza.name).to eq 'pizza'
   end
 
-  xit 'has a price' do
+  it 'has a price when created' do
+    expect(pizza.price).to eq 6
   end
 end
