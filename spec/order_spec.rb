@@ -1,7 +1,9 @@
 require 'order'
 
 describe Order do
-  xit 'has an empty basket when created' do
+  order = Order.new
+  it 'has an empty basket when created' do
+    expect(order.basket).to eq({})
   end
 
   xit 'can place a dish and a quantity in the basket' do

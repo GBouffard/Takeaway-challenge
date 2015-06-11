@@ -114,6 +114,8 @@
         null,
         1,
         1,
+        1,
+        1,
         null,
         null,
         1,
@@ -137,9 +139,13 @@
       ],
       "/Users/guillaumebouffard/Projects/Takeaway-challenge/lib/order.rb": [
         1,
+        1,
+        1,
+        1,
+        null,
         null
       ]
     },
-    "timestamp": 1434058874
+    "timestamp": 1434060428
   }
 }
