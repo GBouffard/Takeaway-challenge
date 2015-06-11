@@ -1,12 +1,17 @@
 require 'inventory'
 
 describe Inventory do
-  inventory = Inventory.new
+  let(:inventory) { Inventory.new }
+  let(:burger) { double :dish, name: 'burger', price: 3 }
+  let(:chips) { double :dish, name: 'chips', price: 1 }
   it 'is empty when created' do
     expect(inventory.list).to eq({})
   end
 
-  xit 'can register a new added dish and its quantity' do
+  it 'can register new dishes and their quantities' do
+    inventory.add_dish(burger, 25)
+    inventory.add_dish(chips, 100)
+    expect(inventory.list).to eq({ burger => 25, chips => 100 })
   end
 
   xit 'can add a new quantity to an existing quantity of a same dish' do
