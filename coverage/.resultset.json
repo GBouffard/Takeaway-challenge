@@ -5,6 +5,14 @@
         1,
         null,
         1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
         null
       ],
       "/Users/guillaumebouffard/Projects/Takeaway-challenge/lib/checkout.rb": [
@@ -15,6 +23,11 @@
         1,
         null,
         1,
+        1,
+        null,
+        null,
+        1,
+        null,
         null
       ],
       "/Users/guillaumebouffard/Projects/Takeaway-challenge/lib/dish.rb": [
@@ -25,6 +38,23 @@
         1,
         null,
         1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
         null
       ],
       "/Users/guillaumebouffard/Projects/Takeaway-challenge/lib/inventory.rb": [
@@ -35,6 +65,26 @@
         1,
         null,
         1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
         null
       ],
       "/Users/guillaumebouffard/Projects/Takeaway-challenge/lib/order.rb": [
@@ -42,6 +92,6 @@
         null
       ]
     },
-    "timestamp": 1434021487
+    "timestamp": 1434040367
   }
 }
