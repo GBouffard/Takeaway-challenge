@@ -15,4 +15,8 @@ class Order
   def cancel
     @basket = {}
   end
+
+  def confirm(checkout)
+    checkout.basket = @basket
+  end
 end

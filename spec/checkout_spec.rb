@@ -6,7 +6,7 @@ describe Checkout do
   let(:order) { double :order, basket: { burger => 2, chips => 2 } }
   let(:checkout) { Checkout.new(order) }
 
-  it 'get the confirmed basket from the order' do
+  it 'gets the confirmed basket from the order' do
     expect(checkout.basket).to eq({ burger => 2, chips => 2 })
   end
 
