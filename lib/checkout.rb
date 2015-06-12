@@ -6,7 +6,8 @@ class Checkout
     @paid = false
   end
 
-  def pay
+  def pay(inventory)
     @paid = true
+    @basket.each { |dish, quantity| inventory.remove_dish(dish, quantity) }
   end
 end
