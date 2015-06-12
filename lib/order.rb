@@ -18,5 +18,12 @@ class Order
 
   def confirm(checkout)
     checkout.basket = @basket
+    checkout.total = calculate_total
+  end
+
+  def calculate_total
+    value = 0
+    @basket.each { |dish, quantity| value += dish.price * quantity }
+    value
   end
 end

@@ -37,9 +37,16 @@ describe Order do
   end
 
   it 'can be confirmed' do
-    checkout = double(:checkout, basket: { burger => 3 })
+    checkout = double(:checkout)
     order.add_dish(burger, 3, inventory)
     expect(checkout).to receive(:basket=)
+    expect(checkout).to receive(:total=)
     order.confirm(checkout)
+  end
+
+  it 'calculates total for checkout on order confirmation' do
+    order.add_dish(burger, 3, inventory)
+    order.add_dish(chips, 3, inventory)
+    expect(order.calculate_total).to eq(12)
   end
 end

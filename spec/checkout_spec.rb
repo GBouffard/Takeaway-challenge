@@ -7,10 +7,11 @@ describe Checkout do
   let(:checkout) { Checkout.new(order) }
 
   it 'gets the confirmed basket from the order' do
+    allow(order).to receive(:total)
     expect(checkout.basket).to eq({ burger => 2, chips => 2 })
   end
 
-  xit 'can show the total amount to pay' do
+  xit 'knows and shows the total amount to pay' do
   end
 
   xit 'can be paid' do
