@@ -36,6 +36,6 @@ describe Order do
     expect(order.basket).to eq({})
   end
 
-  it 'can be confirmed' do
+  xit 'can be confirmed' do
   end
 end
