@@ -18,7 +18,9 @@ describe Checkout do
     expect(checkout.paid).to be false
   end
 
-  xit 'can be paid' do
+  it 'can be paid' do
+  	checkout.pay
+    expect(checkout.paid).to be true
   end
 
   xit 'removes the order dishes and quantities from the inventory when paid' do

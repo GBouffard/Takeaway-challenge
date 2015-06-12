@@ -5,4 +5,8 @@ class Checkout
     @total = order.calculate_total
     @paid = false
   end
+
+  def pay
+    @paid = true
+  end
 end
