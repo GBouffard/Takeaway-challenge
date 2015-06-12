@@ -2,6 +2,7 @@ class Order
   attr_reader :basket
   def initialize
     @basket = {}
+    @total = 0
   end
 
   def add_dish(dish, quantity, from)
@@ -22,8 +23,7 @@ class Order
   end
 
   def calculate_total
-    value = 0
-    @basket.each { |dish, quantity| value += dish.price * quantity }
-    value
+    @basket.each { |dish, quantity| @total += dish.price * quantity }
+    @total
   end
 end

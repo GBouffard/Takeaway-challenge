@@ -3,15 +3,15 @@ require 'checkout'
 describe Checkout do
   let(:burger) { double :dish, name: 'burger', price: 3 }
   let(:chips) { double :dish, name: 'chips', price: 1 }
-  let(:order) { double :order, basket: { burger => 2, chips => 2 } }
+  let(:order) { double :order, basket: { burger => 2, chips => 2 }, calculate_total: 8 }
   let(:checkout) { Checkout.new(order) }
 
   it 'gets the confirmed basket from the order' do
-    allow(order).to receive(:total)
     expect(checkout.basket).to eq({ burger => 2, chips => 2 })
   end
 
-  xit 'knows and shows the total amount to pay' do
+  it 'knows and shows the total amount to pay' do
+    expect(checkout.total).to eq(8)
   end
 
   xit 'can be paid' do
