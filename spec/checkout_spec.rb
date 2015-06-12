@@ -14,6 +14,10 @@ describe Checkout do
     expect(checkout.total).to eq(8)
   end
 
+  it 'has not been paid when created' do
+    expect(checkout.paid).to be false
+  end
+
   xit 'can be paid' do
   end
 
