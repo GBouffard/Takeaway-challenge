@@ -11,4 +11,8 @@ class Order
   def remove_dish(dish, quantity)
     @basket[dish] < quantity ? (fail "Error. There are only #{@basket[dish]} #{dish.name}s in your basket") : @basket[dish] -= quantity
   end
+
+  def cancel
+    @basket = {}
+  end
 end

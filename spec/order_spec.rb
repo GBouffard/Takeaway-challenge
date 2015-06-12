@@ -5,6 +5,7 @@ describe Order do
   let(:burger) { double :dish, name: 'burger', price: 3 }
   let(:chips) { double :dish, name: 'chips', price: 1 }
   let(:inventory) { double :inventory, list: { burger => 5, chips => 10 } }
+
   it 'has an empty basket when created' do
     expect(order.basket).to eq({})
   end
@@ -29,9 +30,12 @@ describe Order do
     expect { order.remove_dish(burger, 4) }.to raise_error 'Error. There are only 3 burgers in your basket'
   end
 
-  xit 'can be confirmed' do
+  it 'can be cancelled' do
+    order.add_dish(burger, 3, inventory)
+    order.cancel
+    expect(order.basket).to eq({})
   end
 
-  xit 'can be cancelled' do
+  it 'can be confirmed' do
   end
 end
