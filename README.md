@@ -27,7 +27,7 @@ To learn about Object-Oriented-Programming and Test-Driven-Development.
 Technologies used
 ----
 - Ruby
-- Rspec and Capybara
+- Rspec
 - Git
 - Twilio
 
@@ -36,10 +36,19 @@ How to run it
 ```
 git clone git@github.com:GBouffard/takeaway-challenge.git
 cd takeaway-challenge
-irb
-Dir["./lib/*"].each {|file| require file }
+cd lib
+touch secrets.rb
+subl secrets.rb
 ```
-You can now play with classes, place an order and have it send an SMS to your phone!
+I used a secrets.rb file that I added to my gitignore. You will need to type these 4 lines with your phone number and your own Twilio credentials in the secrets.rb for the project to work.
+```
+MY_NUMBER = your_phone_number_as_an_integer_starting_from_the_7_digit
+TWILIO_ACCOUNT_SID = 'your_twilio_account_SID_as_a_string'
+TWILIO_AUTH_TOKEN = 'your_twilio_auth_token_as_a_string'
+TWILIO_NUMBER = your_twilio_phone_number_as_an_integer_without_the_+44
+```
+
+now you can play in irb with classes, place an order and have it send an SMS to your phone!
 
 How to run tests
 ----
@@ -47,3 +56,7 @@ How to run tests
 cd takeaway-challenge
 rspec
 ```
+and this is what you should see:
+![](tests_screenshot.png)
+
+On top of that, once rspec has finished running and if you filled secrets.rb, you should automatically receive a SMS confirmation. Please don't wait for any burgers and chips to be delivered at your door. Let's be realistic! It's only an exercise. I can make things happen with my programming skills but I'm not that good...yet.

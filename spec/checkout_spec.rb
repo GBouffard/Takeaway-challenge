@@ -30,6 +30,9 @@ describe Checkout do
     checkout.pay(inventory)
   end
 
-  xit 'sends a confirmation sms when paid' do
+  it 'sends a confirmation sms when paid' do
+    allow(inventory).to receive(:remove_dish)
+    checkout.pay(inventory)
+    expect(checkout.send_sms).to eq ('Message sent')
   end
 end
