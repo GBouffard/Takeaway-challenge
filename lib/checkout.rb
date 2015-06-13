@@ -28,7 +28,7 @@ class Checkout
     @client.account.messages.create(
       from: "+44 #{TWILIO_NUMBER}",
       to: "+44 #{@phone.to_s}",
-      body: "Hello and thanks for ordering at Guillaume food; the food that tastes good! You can expect your order to be delievered before #{time.hour + 1}:#{time.min}")
+      body: "Hello and thanks for ordering with Tasty Frenchy. Tasty Frenchy: its yummy-yummy! You can expect your order to be delievered before #{time.hour + 1}:#{time.min}")
     'Message sent'
   end
 end
