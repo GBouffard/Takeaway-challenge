@@ -1,4 +1,5 @@
 require 'checkout'
+require 'spec_helper'
 
 describe Checkout do
   let(:burger) { double :dish, name: 'burger', price: 3 }

@@ -1,4 +1,5 @@
 require 'dish'
+require 'spec_helper'
 
 describe Dish do
   let(:pizza) { Dish.new('pizza', 6) }

@@ -1,4 +1,5 @@
 require 'order'
+require 'spec_helper'
 
 describe Order do
   let(:order) { Order.new }

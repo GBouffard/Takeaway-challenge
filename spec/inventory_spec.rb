@@ -1,4 +1,5 @@
 require 'inventory'
+require 'spec_helper'
 
 describe Inventory do
   let(:inventory) { Inventory.new }
